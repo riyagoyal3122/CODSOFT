@@ -1,0 +1,18 @@
+# Calculator for performing basic arithmetic operation
+
+Number1 = float(input("Enter first number:"))
+Number2 = float(input("Enter Second number:"))
+Operation = input("Enter the operation you want to perform between two numbers (+,-,*,/):")
+if Operation == "+" :
+    print("Addition of two numbers is" , Number1 + Number2)
+elif Operation == "-" :
+    print("Subtraction of two numbers is" , Number1 - Number2)
+elif Operation == "*" :
+    print("Multiplication of two numbers is" , Number1 * Number2)
+elif Operation == "/" :
+    if Number2 == 0:
+        print("Cannot divide by zero it will be infinite")
+    else:
+        print("Division of two numbers is" , Number1 / Number2)
+else:
+    print("Invalid Input")
