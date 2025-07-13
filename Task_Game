@@ -1,0 +1,11 @@
+# Rock-Paper-Scissor Game
+
+import random
+choices = ("Please enter your choice from ["Rock" , "Paper" , "Scissor"]")
+user_choice = input("Enter choice" , choices)
+Computer_choice = random.choice(choices)
+print("Your choose:" , user_choice)
+print("Computer choose:" , Computer_choice)
+if user_choice == Computer_choice:
+    print("This match is Tie")
+elif 
