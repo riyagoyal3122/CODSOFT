@@ -1,11 +1,26 @@
 # Rock-Paper-Scissor Game
 
 import random
-choices = ("Please enter your choice from ["Rock" , "Paper" , "Scissor"]")
-user_choice = input("Enter choice" , choices)
-Computer_choice = random.choice(choices)
-print("Your choose:" , user_choice)
-print("Computer choose:" , Computer_choice)
-if user_choice == Computer_choice:
-    print("This match is Tie")
-elif 
+choices = ["Rock" , "Paper" , "Scissor"]
+for _ in range(10000):
+    user_choice = input("Enter choice: ")
+    if user_choice not in choices:
+        print("Invalid choice")
+        continue
+    Computer_choice = random.choice(choices)
+    print("Your choice:" , user_choice)
+    print("Computer choice:" , Computer_choice)
+    if user_choice == Computer_choice:
+        print("This match is Tie")
+    elif user_choice == "Rock" and Computer_choice == "Scissor":
+        print("You Win")
+    elif user_choice == "Paper" and Computer_choice == "Rock":
+        print("You Win")
+    elif user_choice == "Scissor" and Computer_choice == "Paper":
+        print("You Win")
+    else:
+        print("You Lose")
+    replay = input("Do you want to replay (Yes/No)?")
+    if replay == "No":
+        print("Thanks for playing. Come back and play again soon")
+        break
